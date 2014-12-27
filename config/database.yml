@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: websocket-chat-sample_development
+
+test:
+  <<: *default
+  database: websocket-chat-sample_test
+
+production:
+  <<: *default
+  database: websocket-chat-sample_production
+  username: websocket-chat-sample
+  password: <%= ENV['WEBSOCKET-CHAT-SAMPLE_DATABASE_PASSWORD'] %>
