@@ -10,10 +10,13 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 gem 'puma'
+gem "faye-websocket"
+gem "redis"
+gem 'sinatra', '>=1.3.0', :require => nil
 
 group :development, :test do
-  gem 'byebug'
   gem 'web-console', '~> 2.0'
+  gem "pry-rails"
   gem 'spring'
+  gem "dotenv-rails"
 end
-
